@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay | Reglas y tutoriales</title>
+
+    <!-- Links a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Tomorrow&display=swap" rel="stylesheet">
+
+    <!-- Links a CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- contenedor de todo el contenido -->
+    <div class="contenedor-principal">
+        <header class="columna">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                    <h1>PixelPlay</h1>
+                </div>
+            </a>
+            <div class="columna">
+                <button id="flecha-abajo">
+                    <img src="img/chevron-down.png" alt="flecha hacia abajo" class="chevron-15px">
+                </button>
+                <button id="flecha-arriba" class="oculto">
+                    <img src="img/chevron-up.png" alt="flecha hacia arriba" class="chevron-15px">
+                </button>
+                <nav id="menu" class="oculto">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cartas.html">Juego de cartas</a></li>
+                        <li><a href="dados.html">Juego de dados</a></li>
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="posiciones.html">Tabla de posiciones</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- fin header / inicio main -->
+        <main class="columna">
+            <section class="rules-header">
+                <h2>Reglas y Tutoriales</h2>
+                <p>
+                    Aprende cómo jugar y domina cada juego con nuestras guías detalladas
+                    y consejos expertos.
+                </p>
+            </section>
+            <!-- Índice de Enlaces Rápidos -->
+            <div class="links">
+                <p><b>Índice</b></p>
+                <nav>
+                    <ul>
+                        <li><a href="#reglas-cartas">Juego de Cartas</a></li>
+                        <li><a href="#reglas-dados">Juego de Dados</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Sección de Reglas y Tutoriales para el Juego de Cartas -->
+            <section id="reglas-cartas" class="columna">
+                <a href="cartas.html" class="imagenes-titulo">
+                    <img src="img/cardback.png" alt="reverso de carta">
+                    <h2>Juego de Cartas <br> Duelo de Barajas</h2>
+                    <img src="img/cardback.png" alt="reverso de carta">
+                </a>
+                <div class="fondo-columnas">
+                    <h3 class="titulo">Objetivo del Juego:</h3>
+                    <p>
+                        Compite contra la computadora y sé el primero en obtener 50 puntos. <br>
+                        <b>¡Intenta alcanzar el top 1 en la tabla de posiciones!</b>
+                    </p>
+                </div>
+
+                <div class="fondo-columnas">
+                    <h3 class="titulo">Reglas del Juego:</h3>
+                    <div class="dos-columnas">
+                        <ul class="columna instrucciones">
+                            <li>
+                                Se juega con una baraja española de 40 cartas. Las cartas
+                                numéricas (del 1 al 7) tienen un valor correspondiente a su número. Las figuras
+                                (sota, caballo y rey) tienen un valor de 10 cada una.
+                            </li>
+                            <li>
+                                Al inicio de cada turno, recibirás 3 cartas al azar del
+                                mazo y en el menu desplegbale "apuesta de puntos" debes decidir la cantidad de puntos a
+                                apostar: 5, 10 o 15
+                                puntos.
+                            </li>
+                        </ul>
+                        <ul class="columna instrucciones">
+                            <li>
+                                Luego de elgir tu apuesta, con el botón "iniciar turno", comienzas la partida.
+                                El turno tiene 3 rondas. En cada ronda, eliges una carta haciendo click sobre ella y la
+                                juegas apretando el botón "jugar carta", gana la ronda quien haya
+                                tirado la carta de mayor valor.
+                            </li>
+                            <li>
+                                El jugador que gane más rondas en un turno suma los puntos
+                                apostados por ambos jugadores.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dos-columnas fondo-columnas">
+                    <div>
+                        <h3 class="titulo">Fin del Juego:</h3>
+                        <p>Ganará el juego el participante que primero consiga llegar a los 50 puntos</p>
+                    </div>
+                    <div>
+                        <h3 class="titulo">Consejos:</h3>
+                        <ol class="columna instrucciones">
+                            <li>Presta atención a las cartas ya utilizadas, el mazo se vuelve a mezclar solo cuando
+                                las cartas se acaban
+                            </li>
+                            <li>Al elegir tu apuesta observa las cartas que te tocaron y se estratégico con los
+                                puntos a arriesgar
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección de Reglas y Tutoriales para el Juego de Dados -->
+            <section id="reglas-dados" class="columna">
+                <a href="dados.html" class="imagenes-titulo">
+                    <img src="img/dragon.gif" alt="gif de dragon estilo 8bit">
+                    <h2>Juego de Dados <br> Ataque del Dragón</h2>
+                    <img src="img/knigth.gif" alt="gif de caballero estilo 8bit">
+                </a>
+                <div class="fondo-columnas">
+                    <h3 class="titulo">Objetivo del Juego:</h3>
+                    <p>
+                        Derrotar al dragón antes de que
+                        te derrote a ti. El dragón tiene un número de "puntos de vida" (HP)
+                        que debes reducir a 0. <b>¡Intenta alcanzar el top 1 en la tabla de posiciones!</b>
+                    </p>
+                </div>
+                <div class="fondo-columnas">
+                    <h3 class="titulo">Reglas del Juego:</h3>
+                    <div class="dos-columnas">
+                        <ul class="columna instrucciones">
+                            <li>
+                                El jugador y el dragón comienzan con su máxima capacidad de vida, 60 puntos HP. 
+                                En cada turno, el jugador lanza dos dados al tocar el botón "atacar dragón".
+                            </li>
+                            <li>Un cartel te informará sobre los resultados de la tirada, al apretar en botón
+                                "continuar" sigue
+                                el juego.
+                            </li>
+                            <li>
+                                Después del ataque del jugador, el dragón ataca automáticamente
+                                lanzando los dados. Y nuevamente recibirás un cartel con información. El juego continúa
+                                hasta que el dragón o el jugador llegue a 0 HP.
+                            </li>
+                        </ul>
+                        <ul class="columna instrucciones">
+                            <li>
+                                <strong>Si alguien obtiene un doble 6:</strong> Realiza un
+                                ataque crítico que inflige 15 de daño al oponente.
+                            </li>
+                            <li>
+                                <strong>Si el jugador obtiene dobles (pero no 6):</strong>
+                                puede elegir si recuperar 12HP o atacar al dragón restándole la suma de los dados.
+                            </li>
+                            <li>
+                                <strong>Si el dragón obtiene dobles (pero no 6):</strong>
+                                el dragón recupera 12HP.
+                            </li>
+                            <li>
+                                <strong>Si se obtienen dos números diferentes:</strong> el daño infligido al
+                                oponente es la suma de los dos dados.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dos-columnas fondo-columnas">
+                    <div>
+                        <h3 class="titulo">Fin del Juego:</h3>
+                        <p>Ganarás cuando consigas reducir a 0 los puntos de vida del dragón antes 
+                            que él te destruya a ti.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="titulo">Consejos:</h3>
+                        <p>
+                            Gestiona tus turnos cuidadosamente, considerando tu salud y el daño
+                            que puedes infligir o recibir en cada turno. Aprovecha los dobles
+                            analizando en cada ocasión si es conveniente recuperar vida o realizar daño.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- fin main / inicio footer -->
+        <footer class="columna">
+            <div id="footer-row" class="columna">
+                <!-- Sección de Información -->
+                <section class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                            <h2>PixelPlay</h2>
+                        </div>
+                    </a>
+                </section>
+                <!-- Sección de +info y contacto -->
+                <div>
+                    <ul id="footer-info-row">
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                        <li>
+                            <address>
+                                <a href="mailto:candedigenova@gmail.com">Contacto</a>
+                            </address>
+                        </li>
+                        <li>
+                            <div class="logos-redes">
+                                <a href="https://www.linkedin.com/in/candesdg" target="_blank">
+                                    <img src="img/logo-linkedin.png" alt="logo de LinkedIn">
+                                </a>
+                                <a href="https://www.behance.net/candeladigenova" target="_blank">
+                                    <img src="img/logo-behance.png" alt="logo de behance">
+                                </a>
+                                <a href="https://github.com/candedg/PixelPlay.git" target="_blank">
+                                    <img src="img/logo-github.png" alt="logo de GitHub">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sección de Derechos de Autor -->
+            <div class="footer-creditos">
+                <p>© 2024 Todos los derechos reservados | PixelPlay</p>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
+    <!-- Links a JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

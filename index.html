@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay</title>
+
+    <!-- Links a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Tomorrow&display=swap" rel="stylesheet">
+
+    <!-- Links a CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- contenedor de todo el contenido -->
+    <div class="contenedor-principal">
+        <header class="columna">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                    <h1>PixelPlay</h1>
+                </div>
+            </a>
+            <div class="columna">
+                <button id="flecha-abajo">
+                    <img src="img/chevron-down.png" alt="flecha hacia abajo" class="chevron-15px">
+                </button>
+                <button id="flecha-arriba" class="oculto">
+                    <img src="img/chevron-up.png" alt="flecha hacia arriba" class="chevron-15px">
+                </button>
+                <nav id="menu" class="oculto">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cartas.html">Juego de cartas</a></li>
+                        <li><a href="dados.html">Juego de dados</a></li>
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="posiciones.html">Tabla de posiciones</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- fin header / inicio main -->
+        <main>
+            <!-- Introducción -->
+            <section class="intro">
+                <h2>Bienvenidos a PixelPlay</h2>
+                <p>
+                    ¡Explora nuestra colección de juegos clásicos, compite contra amigos
+                    y alcanza la cima de la tabla de posiciones!
+                </p>
+            </section>
+            <!-- Juegos Destacados -->
+            <section class="juegos-destacados columna">
+                <h3 class="titulo">Juegos Destacados</h3>
+                <div class="game-cards columna">
+                    <div class="game-card columna">
+                        <img src="img/cartas-preview.png" alt="tres reversos de cartas">
+                        <h4>Juego de Cartas</h4>
+                        <p>
+                            Compite contra la computadora y alcanza 50 puntos para ganar.
+                            ¡Apuesta sabiamente!
+                        </p>
+                        <a href="cartas.html" class="btn">Jugar Ahora</a>
+                    </div>
+                    <div class="game-card columna">
+                        <img src="img/dados.png" alt="dos dados estilo 3d">
+                        <h4>Juego de Dados</h4>
+                        <p>
+                            Un emocionante juego de estrategia y suerte. ¡Lanza los dados y
+                            supera a tu oponente!
+                        </p>
+                        <a href="dados.html" class="btn">Jugar Ahora</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Vista previa de la Tabla de Posiciones -->
+            <section class="apartado">
+                <h3 class="titulo">Tabla de Posiciones</h3>
+                <p>
+                    ¡Visita las tablas para ver quienes obtuvieron los puntajes mas altos!
+                </p>
+                <a href="posiciones.html" class="btn">Ver Tabla Completa</a>
+            </section>
+            <!-- Sección Sobre la Creadora -->
+            <section class="apartado">
+                <h3 class="titulo">Sobre la Creadora</h3>
+                <p>
+                    Descubre más sobre la creadora de PixelPlay y su pasión por el
+                    desarrollo web.
+                </p>
+                <a href="desarrolladores.html" class="btn">Leer Más</a>
+            </section>
+        </main>
+        <!-- fin main / inicio footer -->
+        <footer class="columna">
+            <div id="footer-row" class="columna">
+                <!-- Sección de Información -->
+                <section class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                            <h2>PixelPlay</h2>
+                        </div>
+                    </a>
+                </section>
+                <!-- Sección de +info y contacto -->
+                <div>
+                    <ul id="footer-info-row">
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                        <li>
+                            <address>
+                                <a href="mailto:candedigenova@gmail.com">Contacto</a>
+                            </address>
+                        </li>
+                        <li>
+                            <div class="logos-redes">
+                                <a href="https://www.linkedin.com/in/candesdg" target="_blank">
+                                    <img src="img/logo-linkedin.png" alt="logo de LinkedIn">
+                                </a>
+                                <a href="https://www.behance.net/candeladigenova" target="_blank">
+                                    <img src="img/logo-behance.png" alt="logo de behance">
+                                </a>
+                                <a href="https://github.com/candedg/PixelPlay.git" target="_blank">
+                                    <img src="img/logo-github.png" alt="logo de GitHub">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sección de Derechos de Autor -->
+            <div class="footer-creditos">
+                <p>© 2024 Todos los derechos reservados | PixelPlay</p>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
+    <!-- Links a JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

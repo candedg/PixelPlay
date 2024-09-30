@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay | Ataque del dragón</title>
+
+    <!-- Links a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Tomorrow&display=swap" rel="stylesheet">
+
+    <!-- Links a CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- contenedor de todo el contenido -->
+    <div class="contenedor-principal">
+        <header class="columna">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                    <h1>PixelPlay</h1>
+                </div>
+            </a>
+            <div class="columna">
+                <button id="flecha-abajo">
+                    <img src="img/chevron-down.png" alt="flecha hacia abajo" class="chevron-15px">
+                </button>
+                <button id="flecha-arriba" class="oculto">
+                    <img src="img/chevron-up.png" alt="flecha hacia arriba" class="chevron-15px">
+                </button>
+                <nav id="menu" class="oculto">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cartas.html">Juego de cartas</a></li>
+                        <li><a href="dados.html">Juego de dados</a></li>
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="posiciones.html">Tabla de posiciones</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- fin header / inicio main -->
+        <main class="columna">
+            <section>
+                <h2 class="titulo-resaltado">Ataque deL Dragón</h2>
+                <p>
+                    Consulta las <a href="reglas.html" class="link-reglas">Reglas del Juego</a> aquí.
+                </p>
+            </section>
+            <div class="nombre-jugador-dados columna">
+                <h3>¡Hola! ¿como te llamas?</h3>
+                <form id="nombre-jugador-dados" class="columna">
+                    <label for="nombre-jugador" class="nombre-jugador-dados-hijos">
+                        Usaremos este dato para que aparezcas en la tabla de posiciones!
+                    </label>
+                    <input type="text" id="nombre-jugador" class="nombre-jugador-dados-hijos" name="nombre-jugador"
+                        placeholder="Escribe tu nombre aquí">
+                    <button id="comenzar" class="btn nombre-jugador-dados-hijos">
+                        Comenzar
+                    </button>
+                </form>
+            </div>
+            <div class="juego-dados oculto columna">
+                <div id="solo-participantes" class="columna">
+                    <!-- Sección del Dragón -->
+                    <section class="dragon-seccion columna">
+                        <h2>Dragón</h2>
+                        <div class="display-imagenes-dados">
+                            <div class="estado-dragon">
+                                <img src="img/dragon.gif" alt="dragon animado estilo 8bit"
+                                    class="imagen-dragon altura-imagenes-dados">
+                                <img src="img/grave.png" alt="imagen de tumba estilo pixelart"
+                                    class="oculto tumba-dragon altura-imagenes-dados">
+                            </div>
+                            <div id="dados-dragon">
+                                <!-- Imágenes de dados del dragón -->
+                                <img src="img/dados/dado1.png" alt="imagen dado estilo 3d" id="dado-uno-dragon"
+                                    class="dado altura-imagenes-dados">
+                                <img src="img/dados/dado1.png" alt="imagen dado estilo 3d" id="dado-dos-dragon"
+                                    class="dado altura-imagenes-dados">
+                            </div>
+                        </div>
+                        <p class="estado-hp-dragon">Vida del Dragón: <span id="vida-dragon">60</span>HP</p>
+                    </section>
+
+                    <!-- Sección del Jugador -->
+                    <section class="jugador-seccion columna">
+                        <h2 class="nombre-jugador">Jugador</h2>
+                        <div class="display-imagenes-dados">
+                            <div class="dados-jugador">
+                                <img src="img/dados/dado1.png" alt="imagen dado estilo 3d"
+                                    class="dado  altura-imagenes-dados" id="dado-uno-caballero">
+                                <img src="img/dados/dado1.png" alt="imagen dado estilo 3d"
+                                    class="dado  altura-imagenes-dados" id="dado-dos-caballero">
+                            </div>
+                            <div class="estado-jugador">
+                                <img src="img/knigth.gif" alt="caballero animado estilo 8bit"
+                                    class="imagen-jugador altura-imagenes-dados">
+                                <img src="img/grave.png" alt="imagen de tumba estilo pixelart"
+                                    class="oculto tumba-jugador altura-imagenes-dados">
+                            </div>
+                        </div>
+                        <p class="estado-hp-caballero">Vida del Jugador: <span id="vida-caballero">60</span>HP</p>
+                    </section>
+                </div>
+
+                <div class="botones-recuperar-hp">
+                    <button id="sumar-hp" class="btn oculto">+12 HP caballero</button>
+                    <button id="no-sumar-hp" class="btn oculto">-x HP dragón</button>
+                </div>
+                <button id="atacar-dragon" class="btn oculto">Atacar al Dragón</button>
+                <div class="info-tirada oculto">
+                    <div>
+                        <p class="mensaje-info-tirada">¡El *nombre* realizó un GOLPE CRÍTICO! -15HP *nombre*.
+                            Ahora es momento de que el *nombre* juegue su turno</p>
+                        <button class="btn-info-tirada">Continuar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Área de Resultados -->
+            <section class="resultados oculto">
+                <h3>Resultados del Juego</h3>
+                <p id="resultado-final"></p>
+                <button id="nuevo-juego" class="btn">Nuevo Juego</button>
+            </section>
+        </main>
+        <!-- fin main / inicio footer -->
+        <footer class="columna">
+            <div id="footer-row" class="columna">
+                <!-- Sección de Información -->
+                <section class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                            <h2>PixelPlay</h2>
+                        </div>
+                    </a>
+                </section>
+                <!-- Sección de +info y contacto -->
+                <div>
+                    <ul id="footer-info-row">
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                        <li>
+                            <address>
+                                <a href="mailto:candedigenova@gmail.com">Contacto</a>
+                            </address>
+                        </li>
+                        <li>
+                            <div class="logos-redes">
+                                <a href="https://www.linkedin.com/in/candesdg" target="_blank">
+                                    <img src="img/logo-linkedin.png" alt="logo de LinkedIn">
+                                </a>
+                                <a href="https://www.behance.net/candeladigenova" target="_blank">
+                                    <img src="img/logo-behance.png" alt="logo de behance">
+                                </a>
+                                <a href="https://github.com/candedg/PixelPlay.git" target="_blank">
+                                    <img src="img/logo-github.png" alt="logo de GitHub">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sección de Derechos de Autor -->
+            <div class="footer-creditos">
+                <p>© 2024 Todos los derechos reservados | PixelPlay</p>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
+    <!-- Links a JS -->
+    <script src="js/main.js"></script>
+    <script src="js/dados.js"></script>
+</body>
+
+</html>

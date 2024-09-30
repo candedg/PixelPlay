@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay | Duelo de Barajas</title>
+
+    <!-- Links a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Tomorrow&display=swap" rel="stylesheet">
+
+    <!-- Links a CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- contenedor de todo el contenido -->
+    <div class="contenedor-principal">
+        <header class="columna">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                    <h1>PixelPlay</h1>
+                </div>
+            </a>
+            <div class="columna">
+                <button id="flecha-abajo">
+                    <img src="img/chevron-down.png" alt="flecha hacia abajo" class="chevron-15px">
+                </button>
+                <button id="flecha-arriba" class="oculto">
+                    <img src="img/chevron-up.png" alt="flecha hacia arriba" class="chevron-15px">
+                </button>
+                <nav id="menu" class="oculto">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cartas.html">Juego de cartas</a></li>
+                        <li><a href="dados.html">Juego de dados</a></li>
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="posiciones.html">Tabla de posiciones</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- fin header / inicio main -->
+        <main class="columna">
+            <!-- Sección para registrar el nombre del jugador -->
+            <section>
+                <h2 class="titulo-resaltado">Duelo de Barajas</h2>
+                <p>
+                    Consulta las <a href="reglas.html" class="link-reglas">Reglas del Juego</a> aquí.
+                </p>
+            </section>
+            <div class="nombre-jugador-cartas columna">
+                <h3>¡Hola! ¿como te llamas?</h3>
+                <form id="nombre-jugador-cartas" class="columna">
+                    <label for="nombre-jugador" class="nombre-jugador-cartas-hijos">
+                        ¡Usaremos este dato para que aparezcas en la tabla de posiciones!
+                    </label>
+                    <input type="text" id="nombre-jugador" class="nombre-jugador-cartas-hijos" name="nombre-jugador"
+                        placeholder="Escribe tu nombre aquí">
+                    <button id="comenzar" class="btn nombre-jugador-cartas-hijos">
+                        Comenzar
+                    </button>
+                </form>
+            </div>
+            <div class="interfaz-cartas oculto">
+                <div class="solo-cartas">
+                    <!-- Sección de la Computadora -->
+                    <section class="computadora-seccion">
+                        <h3>Computadora</h3>
+                        <div class="cartas-computadora">
+                            <!-- Imágenes de cartas de la computadora -->
+                            <img src="img/cardback.png" alt="Reverso de la carta" id="carta1-computadora" class="carta">
+                            <img src="img/cardback.png" alt="Reverso de la carta" id="carta2-computadora" class="carta">
+                            <img src="img/cardback.png" alt="Reverso de la carta" id="carta3-computadora" class="carta">
+                        </div>
+                    </section>
+
+                    <!-- Sección del Jugador -->
+                    <section class="jugador-seccion">
+                        <h3 class="titulo-jugador">Jugador</h3>
+                        <!-- Imágenes de cartas del jugador -->
+                        <form class="cartas-jugador">
+                            <div class="columna">
+                                <label for="carta1-jugador"><img src="img/cartas/3oro.jpg" alt="Carta de baraja española" class="carta carta1"></label>
+                                <input type="radio" id="carta1-jugador" class="radio-buttons" name="carta-jugador" value="carta1">
+                            </div>
+                            <div class="columna">
+                                <label for="carta2-jugador"><img src="img/cartas/5copa.jpg" alt="Carta de baraja española " class="carta carta2"></label>
+                                <input type="radio" id="carta2-jugador" class="radio-buttons" name="carta-jugador" value="carta2">
+                            </div>
+                            <div class="columna">
+                                <label for="carta3-jugador"><img src="img/cartas/10espada.jpg" alt="Carta de baraja española" class="carta carta3"></label>
+                                <input type="radio" id="carta3-jugador" class="radio-buttons" name="carta-jugador" value="carta3">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- Sección elección de apuesta -->
+                <div class="apuesta columna">
+                    <div class="label-apuesta columna">
+                        <label for="apuesta" id="label-apuesta">Apuesta de puntos:</label>
+                        <p class="parrafo-apuesta oculto">X puntos</p>
+                    </div>
+                    <select id="apuesta" class="opciones-apuesta">
+                        <option value="5">5 puntos</option>
+                        <option value="10">10 puntos</option>
+                        <option value="15">15 puntos</option>
+                    </select>
+                    <button id="iniciar-turno" class="btn">Iniciar Turno</button>
+                    <button id="jugar-carta" class="oculto btn">Jugar Carta</button>
+                </div>
+            </div>
+
+            <!-- Área de Resultados -->
+            <section id="resultados" class="columna oculto">
+                <p class="contador-rondas">Rondas jugadas 0</p>
+                <h2 class="titulo-resaltado-dos">Resultados</h2>
+                <div class="resultados-parciales">
+                    <p>
+                        Rondas Ganadas: <br>Jugador:
+                        <span id="rondas-jugador">0</span> | Computadora:
+                        <span id="rondas-computadora">0</span>
+                    </p>
+                    <p>
+                        Puntos Totales: <br>Jugador:
+                        <span id="puntos-jugador">-</span> | Computadora:
+                        <span id="puntos-computadora">-</span>
+                    </p>
+                </div>
+                <!-- Botones siguientes turnos -->
+                <button id="siguiente-turno" class="oculto btn">
+                    siguiente turno
+                </button>
+                <p class="mensaje-final oculto rojo verde amarillo"></p>
+                <button id="nuevo-turno" class="oculto btn">Nuevo Turno</button>
+            </section>
+        </main>
+        <!-- fin main / inicio footer -->
+        <footer class="columna">
+            <div id="footer-row" class="columna">
+                <!-- Sección de Información -->
+                <section class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="img/8bit-joystick.png" alt="joystick estilo 8bit color violeta" class="logo-50px">
+                            <h2>PixelPlay</h2>
+                        </div>
+                    </a>
+                </section>
+                <!-- Sección de +info y contacto -->
+                <div>
+                    <ul id="footer-info-row">
+                        <li><a href="reglas.html">Reglas y Tutoriales</a></li>
+                        <li><a href="desarrolladores.html">Sobre la creadora</a></li>
+                        <li>
+                            <address>
+                                <a href="mailto:candedigenova@gmail.com">Contacto</a>
+                            </address>
+                        </li>
+                        <li>
+                            <div class="logos-redes">
+                                <a href="https://www.linkedin.com/in/candesdg" target="_blank">
+                                    <img src="img/logo-linkedin.png" alt="logo de LinkedIn">
+                                </a>
+                                <a href="https://www.behance.net/candeladigenova" target="_blank">
+                                    <img src="img/logo-behance.png" alt="logo de behance">
+                                </a>
+                                <a href="https://github.com/candedg/PixelPlay.git" target="_blank">
+                                    <img src="img/logo-github.png" alt="logo de GitHub">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sección de Derechos de Autor -->
+            <div class="footer-creditos">
+                <p>© 2024 Todos los derechos reservados | PixelPlay</p>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
+    <!-- Links a JS -->
+    <script src="js/main.js"></script>
+    <script src="js/cartas.js"></script>
+</body>
+
+</html>
