@@ -581,6 +581,8 @@ function nuevoTurno() {
   apuesta = 0;
   opcionesApuesta.style.display = "block";
   parrafoApuesta.style.display = "none";
+
+  ganadorCartas = {};
 }
 
 //BOTONES-------------------------------------------------------------------------------
@@ -629,7 +631,7 @@ let resultadosCartas = JSON.parse(resultadosLocalesCartas) || [];
 
 function agregarGanadorCartas() {
   // Creo un objeto con los resultados del último juego
-  const ganadorCartas = {
+  ganadorCartas = {
     nombre: nombreJugador,
     puntos: puntosAcumuladosJugador,
     rondas: contadorRondas,
