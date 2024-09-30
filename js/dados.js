@@ -258,6 +258,7 @@ function resetJuego() {
     contadorTurnos = 0; //resetear contador para proxima partida
     juegoFinalizado = false //resetear valor del juego finalizado
     nombreUsuario = ""; //resetear el nombre del jugador
+    ganadorDados = {};
     ingresarNombreDados.style.display = "block"; //mostrar de nuevo el pedido de nombre
     interfazDados.style.display = "none"; //ocultar la interfaz de los dados
 }
@@ -351,7 +352,7 @@ let resultadosDados = JSON.parse(resultadosLocalesDados) || [];
 
 function agregarGanadorDados() {
     // Creo un objeto con los resultados del último juego
-    const ganadorDados = {
+    ganadorDados = {
         nombre: nombreUsuario,
         turnos: contadorTurnos,
         fecha: fechaFormateada
